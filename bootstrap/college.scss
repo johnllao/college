@@ -1,0 +1,109 @@
+// scss-docs-start import-stack
+// Configuration
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/montserrat-regular.ttf), url(fonts/montserrat-italic.ttf);
+}
+
+@import "node_modules/bootstrap/scss/functions";
+
+$axolorl: #627254;
+$camouflage: #76885B;
+$gainsboro: #DDDDDD;
+$bright-gray: #EEEEEE;
+
+$body-bg: shade-color($gainsboro, 10%);
+$body-color: shade-color($axolorl, 50%);
+
+$input-bg: $gainsboro;
+$input-border-color: shade-color($gainsboro, 10%);
+$input-focus-border-color: $input-border-color;
+
+$font-family-sans-serif: Montserrat;
+$font-size-root: 10pt;
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "accordion";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "alert";
+// @import "progress";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "offcanvas";
+// @import "placeholders";
+
+// Helpers
+@import "node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+.college-header {
+    background-color: shade-color($camouflage, 25%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.college-brand {
+    background-color: $camouflage;
+    color: $bright-gray;
+    font-weight: bold;
+    margin: 0;
+    padding: .2em 1em;
+}
+
+.college-main {
+    margin: 0;
+    padding: .75em;
+}
+
+.college-widget {
+    background-color: $gainsboro;
+    margin: 0;
+    padding: 1em;
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .25rem shade-color($gainsboro, 30%);
+}
+
+.college-row {
+    display: flex;
+    margin: 0 0 .5em 0;
+    padding: 0;
+}
+
+.college-cell {
+    margin: 0 .5em 0 0;
+    padding: 0;
+}
