@@ -8,16 +8,18 @@
 
 @import "node_modules/bootstrap/scss/functions";
 
-$axolorl: #627254;
-$camouflage: #76885B;
-$gainsboro: #DDDDDD;
-$bright-gray: #EEEEEE;
+$color1: #27374D;
+$color2: #526D82;
+$color3: #9DB2BF;
+$color4: #9DB2BF;
 
-$body-bg: shade-color($gainsboro, 10%);
-$body-color: shade-color($axolorl, 50%);
+$primary: $color2;
 
-$input-bg: $gainsboro;
-$input-border-color: shade-color($gainsboro, 10%);
+$body-bg: tint-color($color4, 70%);
+$body-color: shade-color($color1, 50%);
+
+$input-bg: tint-color($color4, 80%);
+$input-border-color: tint-color($color4, 20%);
 $input-focus-border-color: $input-border-color;
 
 $font-family-sans-serif: Montserrat;
@@ -70,15 +72,15 @@ $font-size-root: 10pt;
 // scss-docs-end import-stack
 
 .college-header {
-    background-color: shade-color($camouflage, 25%);
+    background-color: shade-color($color1, 25%);
     display: flex;
     margin: 0;
     padding: 0;
 }
 
 .college-brand {
-    background-color: $camouflage;
-    color: $bright-gray;
+    background-color: tint-color($color1, 10%);
+    color: tint-color($color4, 90%);
     font-weight: bold;
     margin: 0;
     padding: .2em 1em;
@@ -90,11 +92,11 @@ $font-size-root: 10pt;
 }
 
 .college-widget {
-    background-color: $gainsboro;
+    background-color: tint-color($color4, 80%);
     margin: 0;
     padding: 1em;
     border-radius: .5rem;
-    box-shadow: 0 .125rem .25rem shade-color($gainsboro, 30%);
+    box-shadow: 0 .125rem .25rem shade-color($color4, 10%);
 }
 
 .college-row {
@@ -106,4 +108,58 @@ $font-size-root: 10pt;
 .college-cell {
     margin: 0 .5em 0 0;
     padding: 0;
+}
+
+.college-table {
+    background-color: tint-color($color3, 60%);
+    width: 100%;
+
+    @include border-radius(.5em)
+}
+
+.college-table thead {
+    background-color: $color1 !important;
+    color: tint-color($color4, 80%);
+}
+
+.college-table thead th {
+    padding: .5em;
+    white-space: nowrap;
+}
+
+.college-table thead th:first-child {
+    padding-left: 1em;
+}
+
+.college-table thead th:last-child {
+    padding-right: 1em;
+}
+
+.college-table thead tr:first-child th:first-child {
+    @include border-top-start-radius(.5em)
+}
+
+.college-table thead tr:first-child th:last-child {
+    @include border-top-end-radius(.5em)
+}
+
+.college-table tbody td {
+    padding: .5em;
+    white-space: nowrap;
+}
+
+.college-table tbody td:first-child {
+    padding-left: 1em;
+}
+
+.college-table tbody td:last-child {
+    padding-right: 1em;
+}
+
+.college-table tbody tr:last-child td:first-child {
+    @include border-bottom-start-radius(.5em)
+}
+
+.college-table tbody tr:last-child td:last-child {
+    @include border-bottom-end-radius(.5em)
 }
