@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    {{ template "head.html" }}
+    <body>
+        <div>
+            {{ template "header.html" }}
+            <main class="college-main">
+                <div class="d-flex">
+                    <div class="college-widget" style="width: 1024px;">
+                        <div class="college-row">
+                            <table class="college-table">
+                                <colgroup>
+                                    <col style="width: 100px;" />
+                                    <col />
+                                    <col style="width: 120px;"/>
+                                    <col style="width: 220px;"/>
+                                    <col style="width: 150px;"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Symbol</th>
+                                        <th>Name</th>
+                                        <th>Country</th>
+                                        <th>Industry</th>
+                                        <th>Sector</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr onclick="onselectcompany('AAPL')">
+                                        <td>AAPL</td>
+                                        <td>Apple Inc.</td>
+                                        <td>Unites States</td>
+                                        <td>Computer Manufacturing</td>
+                                        <td>Technology</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function onselectcompany(o, symbol) {
+            console.log(symbol)
+            console.log(this)
+        }
+    </script>
+</html>

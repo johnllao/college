@@ -2,9 +2,12 @@ package main
 
 import (
 	"flag"
-	"log"
 	"net"
 	"net/http"
+	"os"
+
+	"github.com/johnllao/college/pkg/log"
+	"github.com/johnllao/college/pkg/web"
 )
 
 const (
@@ -20,19 +23,22 @@ func main() {
 
 	var err error
 
+	log.Init(os.Stderr)
+	log.SetLevel(log.LevelDebug)
+
 	var l net.Listener
 	if l, err = net.Listen("tcp", "localhost:"+port); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 	defer l.Close()
 
 	var server http.Server
-	server.Handler = NewRootHandler(rootpath)
+	server.Handler = web.NewRootHandler(rootpath)
 
-	log.Printf("web server started. port: %s", port)
+	log.Info("web server started. port: %s", port)
 	if err = server.Serve(l); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
-	log.Print("Bye")
+	log.Info("Bye")
 }

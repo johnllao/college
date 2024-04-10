@@ -1,74 +1,11 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hello</title>
-        <link rel="stylesheet" type="text/css" href="css/college.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.min.css" />
-    </head>
+    {{ template "head.html" }}
     <body>
         <div>
-            <header class="college-header">
-                <div class="college-brand">Hello</div>
-            </header>
+            {{ template "header.html" }}
             <main class="college-main">
-                <div class="d-flex">
-                    <div class="college-widget" style="width: 1024px;">
-                        <form method="post" action="/">
-                            <div class="college-row">
-                                <div class="college-cell" style="width: 120px;">
-                                    <label class="form-label">Company</label>
-                                </div>
-                                <div class="college-cell" style="width: 100px;">
-                                    <input class="form-control" type="text" placeholder="symbol" />
-                                </div>
-                                <div class="college-cell" style="width: 652px;">
-                                    <input class="form-control" type="text" placeholder="name" />
-                                </div>
-                                <div class="college-cell" style="width: 50px;">
-                                    <button class="btn btn-primary"><i class="bi-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="college-row">
-                            <table class="college-table">
-                                <colgroup>
-                                    <col style="width: 100px;" />
-                                    <col />
-                                    <col style="width: 120px;"/>
-                                    <col style="width: 220px;"/>
-                                    <col style="width: 150px;"/>
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>Symbol</th>
-                                        <th>Name</th>
-                                        <th>Country</th>
-                                        <th>Industry</th>
-                                        <th>Sector</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>AAPL</td>
-                                        <td>Apple Inc.</td>
-                                        <td>Unites States</td>
-                                        <td>Computer Manufacturing</td>
-                                        <td>Technology</td>
-                                    </tr>
-                                    <tr>
-                                        <td>MSFT</td>
-                                        <td>Microsoft Corporation</td>
-                                        <td>Unites States</td>
-                                        <td>Computer Software</td>
-                                        <td>Technology</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                Welcome!
             </main>
         </div>
     </body>

@@ -3,3 +3,9 @@ build-webserver:
 
 run-webserver:
 	bin/webserver -root /Users/johnllao/src/college/apps/hello/
+
+build-helloweb:
+	go build -o bin/helloweb github.com/johnllao/college/cmd/helloweb
+
+run-helloweb:
+	bin/helloweb -root /Users/johnllao/src/college/apps/hello/
