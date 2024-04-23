@@ -1,0 +1,100 @@
+// scss-docs-start import-stack
+// Configuration
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/montserrat-regular.ttf), url(fonts/montserrat-italic.ttf);
+}
+
+@import "node_modules/bootstrap/scss/functions";
+
+$color1: #27374D;
+$color2: #526D82;
+$color3: #9DB2BF;
+$color4: #9DB2BF;
+
+$primary: $color2;
+
+$body-bg: $color1;
+$body-color: tint-color($color4, 50%);
+
+$input-bg: tint-color($color1, 30%);
+$input-border-color: tint-color($color1, 30%);
+$input-focus-border-color: $input-border-color;
+
+$font-family-sans-serif: Montserrat;
+$font-size-root: 9pt;
+
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "accordion";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "alert";
+// @import "progress";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "offcanvas";
+// @import "placeholders";
+
+// Helpers
+@import "node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+main {
+    background-color: tint-color($color1, 20%);
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .25rem shade-color($color1, 50%);
+    height: 64em;
+    margin: 5em auto;
+    padding: 1em;
+    vertical-align: middle;
+    width: 1024px;
+}
+
+.simple-row {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.simple-cell {
+    margin-right: .75em;
+}
+
+.simple-cell-text-padding {
+    padding-top: .35em;
+}
+
+.simple-flex-grow-1 {
+    flex-grow: 1;
+}
